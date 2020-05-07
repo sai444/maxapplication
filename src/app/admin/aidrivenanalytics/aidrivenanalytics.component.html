@@ -1,0 +1,156 @@
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+    <!-- <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval [color]="'card-header-blue'">
+          <addapptable-card-title>
+            <mat-icon matSuffix>timeline</mat-icon>
+            <span>app</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+        <addapptable-card-header-mark>
+          <span>Selection Windows</span>
+        </addapptable-card-header-mark>
+        <addapptable-card-header-subtitle>
+          <h4>
+            600.000
+          </h4>
+        </addapptable-card-header-subtitle>
+      </addapptable-card-header>
+      <addapptable-card-divider></addapptable-card-divider>
+
+    </addapptable-card> -->
+
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+
+  </div>
+
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>tab_unselected</mat-icon>
+            <span>Select The Process</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div class="row">
+          <div>
+        <img src ="./../../../assets/images/thing//ai.gif">
+
+      </div>
+      <div class = "col">
+
+
+        <mat-form-field>
+          <mat-label>Select Location</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let loc of Locations" [value]="loc.places">
+              {{loc.places}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Select Plant </mat-label>
+          <mat-select>
+            <mat-option *ngFor="let plt of Plants" [value]="plt.plant">
+              {{plt.plant}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="button-row">
+          <button mat-raised-button color="primary" type="submit" >Submit</button>
+        </div>
+
+
+
+      </div>
+
+
+      </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>Process Performance</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>bubble_chart</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+
+
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>pie_chart</mat-icon>
+            <span>Wings</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+
+  <div class="col-8">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>show_chart</mat-icon>
+            <span>Production Montly</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div class="row"   >
+
+      <div >
+        <div style="display: block;">
+
+        </div>
+      </div>
+    </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+</div>
+
+

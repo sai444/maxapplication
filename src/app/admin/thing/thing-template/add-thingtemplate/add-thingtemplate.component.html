@@ -1,0 +1,58 @@
+<mat-toolbar>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="service.form" class="normal-from" (submit)="onSubmit()">
+<mat-grid-list cols="2" rowHeight="500px">
+  <mat-grid-tile>
+    <div class="controles-container">
+      <input type="hidden" formControlName="thing_template_id">
+
+      <mat-form-field>
+        <mat-select formControlName="thing_series_name" placeholder="thing_series_name">
+            <mat-option>none</mat-option>
+            <ng-container *ngFor="let dept of series">
+                <mat-option value="{{dept.thing_series_name}}">{{dept.thing_series_name}}</mat-option>
+            </ng-container>
+        </mat-select>
+    </mat-form-field>
+      <mat-form-field>
+        <input formControlName="thing_details" matInput placeholder="thing_details *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="thing_dims" matInput placeholder="thing_dims *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="thing_pdf_link" matInput placeholder="thing_pdf_link *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="thing_video_link" matInput placeholder="thing_video_link *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+
+
+    </div>
+
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <div class="controles-container">
+    <!-- <input type="hidden" formControlName="_id"> -->
+
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled] =" service.form.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()" >Clear</button>
+    </div>
+  </div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
+
+
+</form>

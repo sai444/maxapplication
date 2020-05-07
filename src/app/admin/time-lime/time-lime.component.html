@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-12">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>timeline</mat-icon>
+            <span>Plant Map</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <mgl-timeline [toggle]="toggle" [alternate]="alternate">
+          <mgl-timeline-entry #timeline *ngFor="let entry of entries; let i = index;" (expand)="onExpandEntry($event, i)">
+            <mgl-timeline-entry-header (click)="onHeaderClick($event)">
+              <div [ngClass]="{'timeline-header-expanded': timeline.expanded}"><h3>{{entry.header}}</h3> <h4>Supported By {{entry.Incharge}} </h4>  <img src ="./../../../assets/images/thing/{{entry.img}}"> </div>
+            </mgl-timeline-entry-header>
+            <mgl-timeline-entry-content>
+              <div>
+                <table id="customers">
+                  <tr>
+                    <th>Meter Name</th>
+                    <th>Meter Type</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr *ngFor="let item of entry.content">
+                  <td>{{item.list}}</td>
+                  <td>{{item.Type}}</td>
+                  <td>{{item.status}}</td>
+                  </tr>
+                </table>
+
+              </div>
+            </mgl-timeline-entry-content>
+            <mgl-timeline-entry-dot [class]="color ? 'primary' : 'accent'" [size]="size" (click)="onDotClick($event)"></mgl-timeline-entry-dot>
+            <mgl-timeline-entry-side>{{entry.Location}}</mgl-timeline-entry-side>
+          </mgl-timeline-entry>
+        </mgl-timeline>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+</div>

@@ -1,0 +1,225 @@
+<!-- <mat-video title="My Tutorial Title" [autoplay]="true" [preload]="true" [fullscreen]="true" [download]="false" color="accent" spinner="spin" >
+
+  <source src="./../../../../assets/videos/meter1.mp4">
+  <track matVideoTrack src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+
+</mat-video> -->
+
+<!-- <mat-video class="videoapp" src = "./../../../../assets/videos/meter1.mp4"></mat-video> -->
+<!-- <div >
+<mat-video  src = "./../../../../assets/videos/meter1.mp4"
+></mat-video>
+
+</div> -->
+<!-- <div class="content video" style="width:1600px;height:auto !important;">
+  <mat-video [src]="./../../../../assets/videos/meter1.mp4"
+
+                [preload]="preload"
+                [fullscreen]="fullscreen"
+                [download]="download"
+                [color]="color"
+                [spinner]="spinner"
+                [poster]="poster"
+
+</div> -->
+
+
+
+
+<div class="row">
+
+  <div class="col-12">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>Selection Window</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div>
+
+          <mat-form-field>
+            <mat-label>Select Location</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let loc of Locations" [value]="loc.places">
+                {{loc.places}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Select Plant </mat-label>
+            <mat-select>
+              <mat-option *ngFor="let plt of Plants" [value]="plt.plant">
+                {{plt.plant}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Select Process</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let Process of Process" [value]="Process.Process">
+                {{Process.Process}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Select Meter</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let Process of Meter" [value]="Process.Meter">
+                {{Process.Meter}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="button-row">
+
+            <button mat-raised-button color="primary" type="submit" >
+            Submit</button></div>
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div>
+          <mat-video title="My Tutorial Title" [fullscreen]="true" [autoplay]="false"
+          style="width:500px;height:auto !important;" [preload]="true"
+           [fullscreen]="false" src="./../../../../assets/videos/meter1.mp4"
+            [download]="true" color="accent" spinner="spin" poster="image.jpg">
+          </mat-video>
+
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div>
+          <mat-video title="My Tutorial Title" [fullscreen]="true" [autoplay]="false"
+          style="width:500px;height:auto !important;" [preload]="true"
+           [fullscreen]="false" src="./../../../../assets/videos/meter1.mp4"
+            [download]="true" color="accent" spinner="spin" poster="image.jpg">
+          </mat-video>
+
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div>
+          <mat-video title="My Tutorial Title" [fullscreen]="true" [autoplay]="false"
+          style="width:500px;height:auto !important;" [preload]="true"
+           [fullscreen]="false" src="./../../../../assets/videos/meter1.mp4"
+            [download]="true" color="accent" spinner="spin" poster="image.jpg">
+          </mat-video>
+
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div>
+          <mat-video title="My Tutorial Title" [fullscreen]="true" [autoplay]="false"
+          style="width:500px;height:auto !important;" [preload]="true"
+           [fullscreen]="false" src="./../../../../assets/videos/meter1.mp4"
+            [download]="true" color="accent" spinner="spin" poster="image.jpg">
+          </mat-video>
+
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div>
+          <mat-video title="My Tutorial Title" [fullscreen]="true" [autoplay]="false"
+          style="width:500px;height:auto !important;" [preload]="true"
+           [fullscreen]="false" src="./../../../../assets/videos/meter1.mp4"
+            [download]="true" color="accent" spinner="spin" poster="image.jpg">
+          </mat-video>
+
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div>
+          <mat-video title="My Tutorial Title" [fullscreen]="true" [autoplay]="false"
+          style="width:500px;height:auto !important;" [preload]="true"
+           [fullscreen]="false" src="./../../../../assets/videos/meter1.mp4"
+            [download]="true" color="accent" spinner="spin" poster="image.jpg">
+          </mat-video>
+
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+
+</div>
+

@@ -1,0 +1,53 @@
+
+<mat-toolbar>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="service.SensorThingForm" class="normal-from" (submit)="onSubmit()">
+<mat-grid-list cols="2" rowHeight="350px">
+  <mat-grid-tile>
+    <div class="controles-container">
+      <input type="hidden" formControlName="_id">
+
+      <mat-form-field>
+        <input formControlName="Sensor" matInput placeholder="Sensor *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="CustomerID" matInput placeholder="CustomerID *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="Details" matInput placeholder="Details *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="ConnDate" matInput placeholder="ConnDate *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+    </div>
+
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <div class="controles-container">
+    <!-- <input type="hidden" formControlName="_id"> -->
+    <mat-form-field>
+      <input formControlName="CalibartionFrq" matInput placeholder="CalibartionFrq *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled] ="service.SensorThingForm.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()" >Clear</button>
+    </div>
+  </div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
+
+
+</form>

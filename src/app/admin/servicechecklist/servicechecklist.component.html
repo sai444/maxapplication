@@ -1,0 +1,137 @@
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval [color]="'card-header-blue'">
+          <addapptable-card-title>
+            <mat-icon matSuffix>timeline</mat-icon>
+            <span>Year</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+        <addapptable-card-header-mark>
+          <span>Total Check List Year</span>
+        </addapptable-card-header-mark>
+        <addapptable-card-header-subtitle>
+          <h4>
+            400
+          </h4>
+        </addapptable-card-header-subtitle>
+      </addapptable-card-header>
+      <addapptable-card-divider></addapptable-card-divider>
+      <addapptable-card-body>
+        <p>Bangalore Plant</p>
+      </addapptable-card-body>
+    </addapptable-card>
+
+    </div>
+<div class="col-12 col-md-6 col-lg-6 col-xl-3">
+<addapptable-card>
+  <addapptable-card-header>
+    <addapptable-card-header-oval [color]="'card-header-gray'">
+      <addapptable-card-title>
+        <mat-icon matSuffix>timeline</mat-icon>
+        <span>Month</span>
+      </addapptable-card-title>
+    </addapptable-card-header-oval>
+    <addapptable-card-header-mark>
+      <span>Total Check List Year</span>
+    </addapptable-card-header-mark>
+    <addapptable-card-header-subtitle>
+      <h4>
+        30
+      </h4>
+    </addapptable-card-header-subtitle>
+  </addapptable-card-header>
+  <addapptable-card-divider></addapptable-card-divider>
+  <addapptable-card-body>
+    <p>Bangalore Plant </p>
+  </addapptable-card-body>
+</addapptable-card>
+
+</div>
+<div class="col-12 col-md-6 col-lg-6 col-xl-3">
+<addapptable-card>
+  <addapptable-card-header>
+    <addapptable-card-header-oval [color]="'card-header-warning'">
+      <addapptable-card-title>
+        <mat-icon matSuffix>show_chart</mat-icon>
+        <span>Pending</span>
+      </addapptable-card-title>
+    </addapptable-card-header-oval>
+    <addapptable-card-header-mark>
+      <span>Total Check List Pending</span>
+    </addapptable-card-header-mark>
+    <addapptable-card-header-subtitle>
+      <h4>
+        8
+      </h4>
+    </addapptable-card-header-subtitle>
+  </addapptable-card-header>
+  <addapptable-card-divider></addapptable-card-divider>
+  <addapptable-card-body>
+    <p>Bangalore Plant</p>
+  </addapptable-card-body>
+</addapptable-card>
+</div>
+<div class="col-12 col-md-6 col-lg-6 col-xl-3">
+<addapptable-card>
+  <addapptable-card-header>
+    <addapptable-card-header-oval [color]="'card-header-danger'">
+      <addapptable-card-title>
+        <mat-icon matSuffix>show_chart</mat-icon>
+        <span>Priority</span>
+      </addapptable-card-title>
+    </addapptable-card-header-oval>
+    <addapptable-card-header-mark>
+      <span>Total Check List Priority</span>
+    </addapptable-card-header-mark>
+    <addapptable-card-header-subtitle>
+      <h4>
+        4
+      </h4>
+    </addapptable-card-header-subtitle>
+  </addapptable-card-header>
+  <addapptable-card-divider></addapptable-card-divider>
+  <addapptable-card-body>
+    <p>Bangalore Plant</p>
+  </addapptable-card-body>
+</addapptable-card>
+</div>
+
+
+
+<div class="col-12">
+<addapptable-card>
+  <addapptable-card-header>
+    <addapptable-card-header-oval>
+      <addapptable-card-title>
+        <mat-icon matSuffix>notification_important</mat-icon>
+        <span>Check List</span>
+      </addapptable-card-title>
+    </addapptable-card-header-oval>
+  </addapptable-card-header>
+  <addapptable-card-body>
+  <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- <app-lists></app-lists> -->
+<full-calendar
+  defaultView="dayGridMonth"
+  [plugins]="calendarPlugins"
+  [weekends]="false"
+  [events]="[
+    { title: 'Check List 1', date: '2020-04-30' },
+    { title: 'Check List 2', date: '2020-04-29' }
+  ]"
+></full-calendar>
+   <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  </addapptable-card-body>
+</addapptable-card>
+</div>
+</div>
+

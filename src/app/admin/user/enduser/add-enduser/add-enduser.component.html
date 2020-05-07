@@ -1,0 +1,79 @@
+<mat-toolbar>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="service.form" class="normal-from" (submit)="onSubmit()">
+<mat-grid-list cols="2" rowHeight="500px">
+  <mat-grid-tile>
+    <div class="controles-container">
+      <input type="hidden" formControlName="customer_id">
+      <mat-form-field>
+        <input formControlName="username" matInput placeholder="username *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field>
+        <input formControlName="password" matInput placeholder="password *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+<mat-form-field>
+  <mat-select formControlName="dept_name" placeholder="dept_name">
+      <mat-option>none</mat-option>
+      <ng-container *ngFor="let dept of depts">
+          <mat-option value="{{dept.dept_name}}">{{dept.dept_name}}</mat-option>
+      </ng-container>
+  </mat-select>
+</mat-form-field>
+
+
+      <mat-form-field>
+        <input formControlName="user_type" matInput placeholder="user_type *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select formControlName="plant_name" placeholder="plant_name">
+            <mat-option>none</mat-option>
+            <ng-container *ngFor="let dept of plants">
+                <mat-option value="{{dept.plant_name}}">{{dept.plant_name}}</mat-option>
+            </ng-container>
+        </mat-select>
+    </mat-form-field>
+
+
+      <mat-form-field>
+        <input formControlName="locations" matInput placeholder="locations *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="email" matInput placeholder="email *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+    </div>
+
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <div class="controles-container">
+    <mat-form-field>
+      <input formControlName="contact" matInput placeholder="contact *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName="address" matInput placeholder="address *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled] ="service.form.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()" >Clear</button>
+    </div>
+  </div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
+
+
+</form>

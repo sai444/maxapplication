@@ -1,0 +1,55 @@
+<p>add-meter-profile works!</p>
+
+<mat-toolbar>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="service.StagesForm" class="normal-from" (submit)="onSubmit()">
+<mat-grid-list cols="2" rowHeight="350px">
+  <mat-grid-tile>
+    <div class="controles-container">
+      <input type="hidden" formControlName="_id">
+
+      <mat-form-field>
+        <input formControlName="MeterSeries" matInput placeholder="MeterSeries *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="Parameter" matInput placeholder="Parameter *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="Details" matInput placeholder="Details *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+    </div>
+
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <div class="controles-container">
+    <!-- <input type="hidden" formControlName="_id"> -->
+    <mat-form-field>
+      <input formControlName="Type" matInput placeholder="Type *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+    <mat-form-field>
+      <input formControlName="Units" matInput placeholder="Units *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled] ="service.StagesForm.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()" >Clear</button>
+    </div>
+  </div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
+
+
+</form>

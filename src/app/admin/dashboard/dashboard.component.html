@@ -1,0 +1,257 @@
+<!-- <div class="row"> -->
+  <!-- <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+    <app-earning></app-earning>
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+    <app-cost></app-cost>
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+    <app-subtotal></app-subtotal>
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+    <app-total></app-total>
+  </div> -->
+  <!-- <div class="chart-wrapper">
+    <canvas baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>
+  <div class="col-12">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>bar_chart</mat-icon>
+            <span>{{'report.ofWeek' | translate}}</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <app-report-week></app-report-week>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+</div> -->
+
+
+
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+    <!-- <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval [color]="'card-header-blue'">
+          <addapptable-card-title>
+            <mat-icon matSuffix>timeline</mat-icon>
+            <span>app</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+        <addapptable-card-header-mark>
+          <span>Selection Windows</span>
+        </addapptable-card-header-mark>
+        <addapptable-card-header-subtitle>
+          <h4>
+            600.000
+          </h4>
+        </addapptable-card-header-subtitle>
+      </addapptable-card-header>
+      <addapptable-card-divider></addapptable-card-divider>
+
+    </addapptable-card> -->
+
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+
+  </div>
+
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>tab_unselected</mat-icon>
+            <span>Select The Thing</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div class="row">
+          <div>
+        <img src ="./../../../assets/images/thing/thing1.png">
+
+      </div>
+      <div class = "col">
+
+
+        <mat-form-field>
+          <mat-label>Select Location</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let loc of Locations" [value]="loc.places">
+              {{loc.places}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Select Plant </mat-label>
+          <mat-select>
+            <mat-option *ngFor="let plt of Plants" [value]="plt.plant">
+              {{plt.plant}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Select Process</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let Process of Process" [value]="Process.Process">
+              {{Process.Process}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="button-row">
+          <button mat-raised-button color="primary" type="submit" >Submit</button>
+        </div>
+
+
+
+      </div>
+
+
+      </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>equalizer</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div>
+              <div style="display: block">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                  [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+              </div>
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>bubble_chart</mat-icon>
+            <span>name</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div class="flex">
+          <div class="flex-item">
+            <div>
+              <div>
+                <div style="display: block">
+                  <canvas baseChart
+                    [datasets]="radarChartData"
+                    [options]="radarChartOptions"
+                    [labels]="radarChartLabels"
+                    [chartType]="radarChartType">
+                  </canvas>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+
+  <div class="col-4">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>pie_chart</mat-icon>
+            <span>Wings</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div class="flex">
+          <div class="flex-item">
+            <div style="display: block">
+              <canvas baseChart
+                [data]="polarAreaChartData"
+                [labels]="polarAreaChartLabels"
+                [legend]="polarAreaLegend"
+                [chartType]="polarAreaChartType">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+
+  <div class="col-8">
+    <addapptable-card>
+      <addapptable-card-header>
+        <addapptable-card-header-oval>
+          <addapptable-card-title>
+            <mat-icon matSuffix>show_chart</mat-icon>
+            <span>Production Montly</span>
+          </addapptable-card-title>
+        </addapptable-card-header-oval>
+      </addapptable-card-header>
+      <addapptable-card-body>
+        <div class="row"   >
+      <div width="600" height="300">
+        <table class="table table-responsive table-condensed" >
+          <tr>
+            <th *ngFor="let label of lineChartLabels">{{label}}</th>
+          </tr>
+          <tr *ngFor="let d of lineChartData; let i=index" [class]="'line-'+i">
+            <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+          </tr>
+        </table>
+
+      </div>
+      <div >
+        <div style="display: block;">
+        <canvas baseChart width="420" height="270"
+                    [datasets]="lineChartData"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors"
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    [plugins]="lineChartPlugins"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+      </addapptable-card-body>
+    </addapptable-card>
+  </div>
+</div>
+
+

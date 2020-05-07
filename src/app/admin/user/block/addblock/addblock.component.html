@@ -1,0 +1,62 @@
+<mat-toolbar>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="service.form" class="normal-from" (submit)="onSubmit()">
+<mat-grid-list cols="2" rowHeight="500px">
+  <mat-grid-tile>
+    <div class="controles-container">
+      <input type="hidden" formControlName="block_id">
+
+      <mat-form-field>
+        <input formControlName="block_name" matInput placeholder="block_name *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select formControlName="plant_name" placeholder="plant_name">
+            <mat-option>none</mat-option>
+            <ng-container *ngFor="let dept of plants">
+                <mat-option value="{{dept.plant_name}}">{{dept.plant_name}}</mat-option>
+            </ng-container>
+        </mat-select>
+    </mat-form-field>
+      <mat-form-field>
+        <input formControlName="block_addr" matInput placeholder="block_addr *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+
+
+    </div>
+
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <div class="controles-container">
+    <!-- <input type="hidden" formControlName="_id"> -->
+    <mat-form-field>
+      <input formControlName="block_details" matInput placeholder="block_details *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName="block_lat" matInput placeholder="block_lat *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName="block_long" matInput placeholder="block_long *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled] ="service.form.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()" >Clear</button>
+    </div>
+  </div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
+
+
+</form>

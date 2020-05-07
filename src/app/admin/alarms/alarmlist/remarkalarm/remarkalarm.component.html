@@ -1,0 +1,67 @@
+
+
+
+<mat-toolbar>
+  <span class="fill-remaining-space">
+
+
+  <span class="fill-remaining-space"></span>
+  <span>Meter Type</span>
+  <span class="fill-remaining-space"></span>
+  </span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="service.empUserForm" class="normal-from" (submit)="onSubmit()">
+<mat-grid-list cols="2" rowHeight="350px">
+  <mat-grid-tile>
+    <div class="controles-container">
+      <input type="hidden" formControlName="_id">
+      <mat-form-field>
+        <input   formControlName="Thing" matInput placeholder="Thing *" >
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="Process" matInput placeholder="Process *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="severity" matInput placeholder="Password *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="severityalarmDetails" matInput placeholder="severityalarmDetails *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="alarmRemark" matInput placeholder="alarmRemark *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+    </div>
+
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <div class="controles-container">
+    <!-- <input type="hidden" formControlName="_id"> -->
+    <mat-form-field>
+      <input formControlName="Status" matInput placeholder="Status *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName="timedate" matInput placeholder="timedate *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled] ="service.empUserForm.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()" >Clear</button>
+    </div>
+  </div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
+
+
+</form>

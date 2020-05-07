@@ -1,0 +1,60 @@
+<mat-toolbar>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="service.form" class="normal-from" (submit)="onSubmit()">
+<mat-grid-list cols="2" rowHeight="500px">
+  <mat-grid-tile>
+    <div class="controles-container">
+      <input type="hidden" formControlName="stage_param_id">
+      <mat-form-field>
+        <input formControlName="stage_param_name" matInput placeholder="stage_param_name *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="stage_param_type" matInput placeholder="stage_param_type *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="stage_param_units" matInput placeholder="stage_param_units *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+    </div>
+
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <div class="controles-container">
+    <!-- <input type="hidden" formControlName="_id"> -->
+
+    <mat-form-field>
+      <mat-select formControlName="stage_name" placeholder="stage_name">
+          <mat-option>none</mat-option>
+          <ng-container *ngFor="let dept of stagesdata">
+              <mat-option value="{{dept.stage_name}}">{{dept.stage_name}}</mat-option>
+          </ng-container>
+      </mat-select>
+  </mat-form-field>
+    <mat-form-field>
+      <input formControlName="stage_params" matInput placeholder="stage_params *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+    <mat-form-field>
+      <input formControlName="stage_param_details" matInput placeholder="stage_param_details *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled] ="service.form.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()" >Clear</button>
+    </div>
+  </div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
+
+
+</form>

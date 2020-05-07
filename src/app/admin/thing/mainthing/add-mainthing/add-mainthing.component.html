@@ -1,0 +1,66 @@
+
+
+<mat-toolbar>
+  <span class="fill-remaining-space">Create Thing</span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="service.StagesForm" class="normal-from" (submit)="onSubmit()">
+<mat-grid-list cols="2" rowHeight="350px">
+  <mat-grid-tile>
+    <div class="controles-container">
+      <input type="hidden" formControlName="_id">
+
+      <mat-form-field>
+        <input formControlName="meterName" matInput placeholder="meterName *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="CustomerID" matInput placeholder="CustomerID *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="InstallationDate" matInput placeholder="InstallationDate *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field>
+        <input formControlName="MeterSerialNo" matInput placeholder="MeterSerialNo *">
+        <!-- <mat-error>This Field is mandatory</mat-error> -->
+      </mat-form-field>
+    </div>
+
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <div class="controles-container">
+    <!-- <input type="hidden" formControlName="_id"> -->
+    <mat-form-field>
+      <input formControlName="Plant" matInput placeholder="Plant *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName="Department" matInput placeholder="Department *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+    <mat-form-field>
+      <input formControlName="Sensor" matInput placeholder="Sensor *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName="Address" matInput placeholder="Address *">
+      <!-- <mat-error>This Field is mandatory</mat-error> -->
+    </mat-form-field>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled] ="service.StagesForm.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()" >Clear</button>
+    </div>
+  </div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
+
+
+</form>
