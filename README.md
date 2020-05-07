@@ -4,7 +4,7 @@ Future Connect is an admin template developed using angular.
 
 ng-Future Connect is a free template for angular.
 
-[see demo](http://122.133.167.113:4200)
+[see demo](http://122.166.167.113:4200)
 
 ## Getting Started
 
