@@ -1,4 +1,4 @@
-# Future Connect ui
+# Future Connect UI
 
 Future Connect is an admin template developed using angular.
 
