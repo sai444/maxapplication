@@ -1,8 +1,8 @@
 {
-  "name": "addapptables",
+  "name": "FutureConnect",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Addapptables ui is a free template for angular",
+  "description": "FutureConnect ui is a free template for angular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
